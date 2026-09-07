@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SandBox</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css-externo.css">
+</head>
+<body>
+    <h1>Página de testes</h1>
+    <p><a href="../index.html" rel="prev">Voltar para página inicial</a></p>
+    <h2>Adicionando áudio</h2>
+    <p>Dando continuidade a atividade 4, agora vou adicionar um elemento de áudio à página.</p>
+    <audio controls autoplay>
+        <source src="../assets/midia/flow-string.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <h2>Adicionando vídeo</h2>
+    <p>Vídeo do youtube incorporado externamente:</p>
+    <!-- O vídeo é incorporado usando a tag iframe, entretanto, o youtube, por questões de segurança, bloqueia quando o arquivo html é executado via ariquivo local, mas funciona perfeitamente com um servidor local, como a extensão Live Server -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Tcx6YyXvvRI?si=nZmEc6-598JPNmnE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>
