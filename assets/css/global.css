@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Magra:wght@400;700&display=swap');
+
+:root{
+    --primary-color: #1b4b72;
+    --accent-color: #D9531E;
+    --bg-color: #F4EFE6;
+    --text-color: #111827;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Magra', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3em;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: var(--primary-color);
+}
+
+.logo-texto{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.logo-texto span{
+    color: var(--accent-color);
+}
+
+.logo-texto:hover {
+    color: var(--accent-color);
+}
+
+#menu ul{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+#menu a{
+    text-decoration: none;
+    color: var(--bg-color);
+    font-weight: 700;
+    padding: 10px 25px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+#menu a:hover{
+    background-color: var(--text-color);
+    border: 5px solid var(--text-color);
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .logo-texto{
+        padding: 20px;
+    }
+
+    #menu {
+        width: 100%;
+        background-color: var(--text-color);
+    }
+
+    #menu ul{
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+
+    #menu a {
+        display: block;
+        width: 100%;
+        border-radius: 0;
+        padding: 15px 20px;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
