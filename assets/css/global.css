@@ -37,6 +37,7 @@ header {
     text-decoration: none;
     font-size: 1.5em;
     font-weight: 700;
+    margin-right: auto;
 }
 
 .logo-texto span{
@@ -57,10 +58,11 @@ header {
     text-decoration: none;
     color: var(--bg-color);
     font-weight: 700;
-    padding: 10px 25px;
+    padding: 8px 14px;
     border: 2px solid transparent;
     border-radius: 30px;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 #menu a:hover{
@@ -69,18 +71,50 @@ header {
     color: var(--white);
 }
 
+.btn-login {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 8px 15px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-size: 0.95em;
+    margin-left: 25px;
+}
+
+.btn-login:hover {
+    background-color: #b84317;
+    transform: translateY(-2px);
+}
+
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        padding: 0;
+        flex-wrap: wrap;
+        padding: 15px 20px 0 20px;
     }
 
     .logo-texto{
-        padding: 20px;
+        margin-right: 0;
+        padding: 0;
+        order: 1;
+    }
+
+    .btn-login {
+        order: 2;
+        padding: 8px 16px;
+        font-size: 0.85em;
     }
 
     #menu {
-        width: 100%;
+        order: 3;
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-top: 15px;
         background-color: var(--text-color);
     }
 
