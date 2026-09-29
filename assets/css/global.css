@@ -26,9 +26,10 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 15px 5%;
+    justify-content: space-between;
+    padding: 15px 20px 0 20px;
     background-color: var(--primary-color);
 }
 
@@ -38,6 +39,9 @@ header {
     font-size: 1.5em;
     font-weight: 700;
     margin-right: auto;
+    margin-right: 0;
+    padding: 0;
+    order: 1;
 }
 
 .logo-texto span{
@@ -48,30 +52,8 @@ header {
     color: var(--accent-color);
 }
 
-#menu ul{
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
-#menu a{
-    text-decoration: none;
-    color: var(--bg-color);
-    font-weight: 700;
-    padding: 8px 14px;
-    border: 2px solid transparent;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-}
-
-#menu a:hover{
-    background-color: var(--text-color);
-    border: 5px solid var(--text-color);
-    color: var(--white);
-}
-
 .btn-login {
+    order: 2;
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -79,11 +61,10 @@ header {
     color: var(--white);
     text-decoration: none;
     font-weight: 700;
-    padding: 8px 15px;
+    padding: 8px 16px;
     border-radius: 30px;
     transition: all 0.3s ease;
-    font-size: 0.95em;
-    margin-left: 25px;
+    font-size: 0.85em;
 }
 
 .btn-login:hover {
@@ -91,45 +72,122 @@ header {
     transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
+#menu{
+    order: 3;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: 15px;
+    background-color: var(--text-color);
+}
+
+#menu ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+}
+
+#menu a{
+    display: block;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    color: var(--bg-color);
+    font-weight: 700;
+    padding: 15px 20px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+@media (min-width: 601px) {
     header {
         flex-wrap: wrap;
-        padding: 15px 20px 0 20px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+        padding: 15px 2%;
     }
 
     .logo-texto{
-        margin-right: 0;
-        padding: 0;
-        order: 1;
-    }
-
-    .btn-login {
-        order: 2;
-        padding: 8px 16px;
-        font-size: 0.85em;
+        margin-right: auto;
+        font-size: 1.3em;
     }
 
     #menu {
-        order: 3;
-        width: calc(100% + 40px);
-        margin-left: -20px;
-        margin-right: -20px;
-        margin-top: 15px;
-        background-color: var(--text-color);
+        order: 2;
+        width: auto;
+        margin: 0;
+        background-color: transparent;
     }
 
     #menu ul{
-        flex-direction: column;
-        width: 100%;
-        gap: 0;
+        flex-direction: row;
+        gap: 5px;
     }
 
     #menu a {
-        display: block;
-        width: 100%;
-        border-radius: 0;
-        padding: 15px 20px;
-        text-align: left;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: inline-block;
+        padding: 6px 10px;
+        font-size: 0.85em;
+        border-radius: 30px;
+        border: 2px solid transparent;
+        border-bottom: none;
+        white-space: nowrap;
+    }
+
+    #menu a:hover{
+        background-color: var(--text-color);
+        border: 5px solid var(--text-color);
+        color: var(--white);
+    }
+
+    .btn-login {
+        order: 3;
+        margin-left: 0;
+        font-size: 0.85em;
+        padding: 6px 12px;
+        white-space: nowrap;
+    }
+}
+
+@media (min-width: 790px){
+    header {
+        padding: 15px 5%;
+    }
+
+    .logo-texto {
+        font-size: 1.5em;
+    }
+
+    #menu ul {
+        gap: 15px;
+    }
+
+    #menu a {
+        padding: 8px 14px;
+        font-size: 1em;
+    }
+
+    .btn-login{
+        margin-left: 15px;
+        padding: 8px 15px;
+        font-size: 0.95em;
+    }
+}
+
+@media (min-width: 1025px) {
+    #menu ul{
+        gap: 25px;
+    }
+
+    .btn-login {
+        margin-left: 25px;
+    }
+
+    .logo-texto{
+        font-size: 1.8em;
     }
 }
