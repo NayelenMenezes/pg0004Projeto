@@ -12,7 +12,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.733)), url('../../assets/images/bk-login-grande.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.733)), url('assets/images/bk-login-grande.jpg');
     background-size: cover;
     background-position: center;
 }
